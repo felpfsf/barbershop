@@ -15,7 +15,7 @@
 
 Projeto de frontend sobre uma barbearia fictícia chamada BarberShop, o site contém informações sobre a história, os profissionais, os serviços ofertados além de um formulário para contato e uma seção de depoimentos. Desenvolvido somente com HTML, CSS e JS.
 
-#### O projeto ainda está em desenvolvimento portanto ainda pode sofrer alterações
+#### O projeto ainda está em desenvolvimento portanto pode sofrer alterações
 
 
 ---
