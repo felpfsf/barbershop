@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Barber Shop</title>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#">BarberShop.</a>
+        <div class="menu">
+          <ul>
+            <li><a href="#" onclick="closeMenu()">Início</a></li>
+            <li><a href="#" onclick="closeMenu()">Sobre</a></li>
+            <li><a href="#" onclick="closeMenu()">Serviços</a></li>
+            <li><a href="#" onclick="closeMenu()">Contato</a></li>
+          </ul>
+        </div>
+        <button class="open-menu" aria-expanded="false" onclick="openMenu()">
+          <i class="ph-list"></i>
+        </button>
+        <button class="close-menu" aria-expanded="true" onclick="closeMenu()">
+          <i class="ph-x"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- home -->
+    <section id="home">
+      <div class="wrapper">
+        <div class="image">
+          <img
+            src="./assets/black-leather-barber-chair-near-brown-brick-wall.avif"
+            alt=""
+          />
+        </div>
+        <header>
+          <h2>Um titulo legal para a barbearia</h2>
+          <p>Um texto bacana para atrair clientes para a barbearia</p>
+          <a class="button" href="#contact"
+            ><i class="ph-whatsapp-logo-thin"></i>Agendar um horário</a
+          >
+        </header>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="image">
+          <img src="./assets/utensilios.avif" alt="" />
+        </div>
+        <header>
+          <h2>Sobre a nós</h2>
+          <p>Um pouco sobre a BarberShop</p>
+        </header>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit <strong>amet consectetur</strong> adipisicing
+            elit. Ullam amet ex molestiae ea numquam dolore quasi voluptate
+            laudantium voluptatem. Distinctio a, architecto ipsa ducimus quis
+            ullam repellendus? Temporibus, quos illo!
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit
+            <strong>amet consectetur adipisicing elit.</strong>
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam amet
+            ex molestiae ea numquam dolore quasi voluptate laudantium
+            voluptatem. Distinctio a, architecto ipsa ducimus quis ullam
+            repellendus? Temporibus, quos illo!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h2>Nossos Serviços</h2>
+          <p>Esta é uma seleção de nossos serviços oferecidos</p>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <img src="./assets/short-male-hair-shape.png" alt="" />
+              <h3>Cortes</h3>
+              <p>Corte de cabelo moderno e barba desenhada</p>
+            </div>
+
+            <div class="card">
+              <img src="./assets/spray-bottles.png" alt="" />
+              <h3>Produtos</h3>
+              <p>Tratamento para o cabelo ou barba com produtos de qualidade</p>
+            </div>
+
+            <div class="card">
+              <img src="./assets/barber.png" alt="" />
+              <h3>Outro serviço</h3>
+              <p>Uma descrição do serviço oferecido na barbearia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <sec id="contact">
+      <div class="wrapper">
+        <header>
+          <h2>Entre em contato com a gente!</h2>
+        </header>
+        <div class="content">
+          <p>Entre em contato com a BarberShop, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+          <a class="button" href="https://wa.me/5511987654321"
+            ><i class="ph-whatsapp-logo-thin"></i>Agendar um horário</a
+          >
+          formulario aqui
+        </div>
+      </div>
+    </sec>
+
+    <footer>
+      <p>
+        &copy; Copyright BarberShop - 2022 <br />
+        Desenvolvido por Felipe F.
+      </p>
+      social-links aqui
+    </footer>
+
+    <!-- Scrollreveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- main js -->
+    <script src="./main.js"></script>
+  </body>
+</html>

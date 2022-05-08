@@ -1,0 +1,362 @@
+/* -------------------------- global -------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 190;
+
+  --brand_primary: hsl(var(--hue), 100%, 26%);
+  --brand_light: hsl(calc(var(--hue) - 22), 23%, 89%);
+  --brand_light2: hsl(calc(var(--hue) + 10), 14%, 97%);
+  --brand_hover: hsl(var(--hue), 100%, 14%);
+
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+
+  --nav_height: 7.2rem;
+
+  --font-title: 'Poppins', sans-serif;
+
+  font-size: 62.5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  /* width: 37.5rem; */
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+section h2 {
+  font-family: var(--font-title);
+  line-height: 3.9rem;
+
+  color: var(--headline);
+}
+
+.button {
+  background: var(--brand_primary);
+  padding: 1.6rem 3.2rem;
+
+  width: fit-content;
+
+  margin-bottom: 8rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.button:hover {
+  background: var(--brand_hover);
+}
+
+/* -------------------------- navigation -------------------------- */
+
+nav {
+  display: flex;
+
+  height: var(--nav_height);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav.scroll {
+  background: var(--brand_primary);
+}
+
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+nav .logo {
+  font: 700 2.4rem var(--font-title);
+  color: var(--headline);
+}
+
+nav .ph-list,
+nav .ph-x {
+  font-size: 2.4rem;
+}
+
+/* -------------------------- menu expanded -------------------------- */
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  background: var(--brand_primary);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav_height);
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.1rem;
+}
+
+.menu ul li a {
+  color: var(--paragraph);
+}
+
+body.menu-expanded .logo,
+body.menu-expanded nav button {
+  position: relative;
+  z-index: 100;
+}
+
+/* -------------------------- home -------------------------- */
+
+#home {
+  padding-block: 0;
+  padding-top: calc(4.1rem + var(--nav_height));
+}
+
+/* #home::before {
+  content: '';
+  width: 100vw;
+  height: calc(76% + var(--nav_height));
+  background-color: var(--brand_light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} */
+
+#home h2 {
+  margin-bottom: 3.2rem;
+}
+
+#home p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#home .button {
+  margin-inline: auto;
+}
+
+/* -------------------------- home : image -------------------------- */
+
+#home .image {
+  position: relative;
+  margin-bottom: 3.2rem;
+}
+
+#home .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--brand_light2);
+
+  position: absolute;
+  top: -16.8%;
+  left: 7.3%;
+  z-index: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.95rem;
+}
+
+#home .image img,
+#home .image::before {
+  border-radius: 0.5rem;
+}
+
+/* -------------------------- about : image -------------------------- */
+#about .image {
+  position: relative;
+  margin-bottom: 3.2rem;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--brand_light2);
+
+  position: absolute;
+  top: -8%;
+  left: -32%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.5rem;
+}
+/* -------------------------- about -------------------------- */
+#about {
+  text-align: justify;
+}
+
+#about header h2 {
+  margin-bottom: 1.6rem;
+}
+
+#about .content {
+  margin: 1.6rem 0 8rem;
+}
+
+#about .content p {
+  line-height: 2.6rem;
+}
+
+/* -------------------------- services -------------------------- */
+#services header {
+  text-align: left;
+  margin-bottom: 6.4rem;
+}
+
+#services header h2 {
+  margin-bottom: 1.6rem;
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+#services .card {
+  text-align: center;
+
+  padding: 3.6rem 2rem;
+
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: .35rem solid var(--brand_primary);
+  border-radius: 0.25rem 0.25rem 0 0;
+
+  margin-bottom: 8rem;
+}
+
+#services .cards img {
+  width: 25%;
+  margin-bottom: 1.5rem;
+}
+
+#services .cards h3 {
+  margin-bottom: .75rem;
+}
+
+/* -------------------------- contact -------------------------- */
+
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 1.6rem;
+}
+
+#contact .content p {
+  margin-bottom: 3.2rem;
+}
+
+
+
+/* -------------------------- footer -------------------------- */
+
+footer {
+  background-color: var(--brand_primary);
+  padding-block: 6rem;
+}
